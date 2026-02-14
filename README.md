@@ -4,6 +4,9 @@ arduino-antuator-rs
 Rust project for the _Arduino Uno_.
 
 ## Build Instructions
+
+> Windows specific instructions [here](https://dev.to/ryankopf/how-to-use-rust-on-arduino-windows-rust-143g)
+
 1. Install prerequisites as described in the [`avr-hal` README] (`avr-gcc`, `avr-libc`, `avrdude`, [`ravedude`]).
 
 2. Run `cargo build` to build the firmware.
