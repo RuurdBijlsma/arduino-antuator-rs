@@ -67,9 +67,6 @@ fn main() -> ! {
         pwm: pwm_output,
     };
 
-    let x: Option<i32> = None;
-    x.unwrap();
-
     motor.stop();
 
     // Setup External Interrupt (INT0 on Pin D2)
