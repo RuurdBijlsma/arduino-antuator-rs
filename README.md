@@ -25,6 +25,7 @@ Rust project for the _Arduino Uno_.
 
 * Dual-Channel DC Motor Driver - DFR0601 [[link](https://www.dfrobot.com/product-1861.html)] 
 * Antuator Linear Actuator with hall effect sensor [[link](https://antuatorlinear.com/)]
+* DC power supply 12V 40A
 
 ### Wiring
 
