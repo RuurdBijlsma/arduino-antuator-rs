@@ -20,3 +20,14 @@ Rust project for the _Arduino Uno_.
 
 [`avr-hal` README]: https://github.com/Rahix/avr-hal#readme
 [`ravedude`]: https://crates.io/crates/ravedude
+
+## Hardware
+
+* Dual-Channel DC Motor Driver - DFR0601 [[link](https://www.dfrobot.com/product-1861.html)] 
+* Antuator Linear Actuator with hall effect sensor [[link](https://antuatorlinear.com/)]
+
+### Wiring
+
+See pictures of how it's wired in [/docs/wiring-pics](docs/wiring-pics).
+
+![](docs/wiring-pics/wiring.jpg)

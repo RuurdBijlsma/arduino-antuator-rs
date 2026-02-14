@@ -12,7 +12,7 @@ Encoders encoder(2, 3);     // Create an Encoder object name leftEncoder, using 
 
 void setup() {
   // Change this to set direction moved by actuator
-  auto direction = FORWARD_PIN;
+  auto direction = BACKWARD_PIN;
   auto moveSeconds = 5;
 
   // Setup
