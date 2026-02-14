@@ -7,12 +7,10 @@ use arduino_hal::port::Pin;
 use arduino_hal::simple_pwm::{IntoPwmPin, Prescaler, Timer1Pwm};
 use core::cell::Cell;
 
-// ================= CONFIG =================
-const MOVE_FORWARD: bool = false;
+const MOVE_FORWARD: bool = true;
 const MOVE_SECONDS: u32 = 5;
 const BAUD_RATE: u32 = 57600;
 const PWM_SPEED: u8 = 255;
-// ==========================================
 
 static ENCODER_COUNT: avr_device::interrupt::Mutex<Cell<i32>> =
     avr_device::interrupt::Mutex::new(Cell::new(0));
