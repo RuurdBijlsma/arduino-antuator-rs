@@ -11,7 +11,8 @@ Encoders encoder(2, 3);     // Create an Encoder object name leftEncoder, using 
 // absolute waarde krijgen met 
 
 void setup() {
-  auto direction = BACKWARD_PIN;
+  // Change this to set direction moved by actuator
+  auto direction = FORWARD_PIN;
   auto moveSeconds = 5;
 
   // Setup
