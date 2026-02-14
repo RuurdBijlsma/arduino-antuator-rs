@@ -18,6 +18,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5f0e0fee31ef5ed1ba1316088939cea399010ed7731dba877ed44aeb407a75ea"
 
 [[package]]
+name = "arduino-antuator"
+version = "0.1.0"
+dependencies = [
+ "arduino-hal",
+ "avr-device",
+ "embedded-hal 1.0.0",
+ "nb 1.1.0",
+ "panic-halt",
+ "ufmt",
+]
+
+[[package]]
 name = "arduino-hal"
 version = "0.1.0"
 source = "git+https://github.com/rahix/avr-hal?rev=e5c8f37fe48419956e722490a82b9ca9b9fc61a2#e5c8f37fe48419956e722490a82b9ca9b9fc61a2"
@@ -596,18 +608,6 @@ name = "roxmltree"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6c20b6793b5c2fa6553b250154b78d6d0db37e72700ae35fad9387a46f487c97"
-
-[[package]]
-name = "rust-arduino-test"
-version = "0.1.0"
-dependencies = [
- "arduino-hal",
- "avr-device",
- "embedded-hal 1.0.0",
- "nb 1.1.0",
- "panic-halt",
- "ufmt",
-]
 
 [[package]]
 name = "serde"

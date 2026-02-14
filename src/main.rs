@@ -10,7 +10,7 @@ use panic_halt as _;
 // ================= CONFIGURATION =================
 const MOVE_FORWARD: bool = true; // true = D5, false = D6
 const MOVE_SECONDS: u32 = 5;
-const BAUD_RATE: u32 = 57600; // Faster baud rate to prevent lagging
+const BAUD_RATE: u32 = 57600;
 // =================================================
 
 static ENCODER_COUNT: avr_device::interrupt::Mutex<Cell<i32>> =
@@ -101,7 +101,7 @@ fn main() -> ! {
 /// Returns the new count to be stored in last_sent_count.
 fn print_if_changed(
     serial: &mut arduino_hal::hal::usart::Usart0<arduino_hal::DefaultClock>,
-    last_count: i32
+    last_count: i32,
 ) -> i32 {
     let current_count = avr_device::interrupt::free(|cs| ENCODER_COUNT.borrow(cs).get());
     if current_count != last_count {

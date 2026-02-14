@@ -1,12 +1,12 @@
 [package]
-name = "rust-arduino-test"
+name = "arduino-antuator"
 version = "0.1.0"
 authors = ["Ruurd Bijlsma <ruurd@bijlsma.dev>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
 
 [[bin]]
-name = "rust-arduino-test"
+name = "arduino-antuator"
 test = false
 bench = false
 
