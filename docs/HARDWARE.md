@@ -34,51 +34,49 @@ graph TD
     end
 
     subgraph DFR0601 Motor Driver
-        IN1[IN1]
-        IN2[IN2]
-        PWM[PWM]
-        GND_D[GND]
-        VCC[VCC - Logic]
-        VIN[VIN - 12V]
-        M1+[Output 1+]
-        M1-[Output 1-]
+        PPLS[PSU +]
+        PGND[PSU GND]
+        M1+[Motor 1 +]
+        M1-[Motor 1 GND]
+        MD_V1[Pin V1]
+        MD_P1[Pin P1]
+        MD_A1[Pin A1]
+        MD_B1[Pin B1]
+        MD_G1[Pin G1]
     end
 
-    subgraph Linear Actuator
+    subgraph Linear Actuator 1
         LA_M+[Motor +]
         LA_M-[Motor -]
-        LA_VCC[Encoder VCC]
-        LA_GND[Encoder GND]
-        LA_A[Phase A]
-        LA_B[Phase B]
+        LA_SENS_A_VOUT[Sensor A Vout]
+        LA_SENS_B_VOUT[Sensor B Vout]
+        LA_SENS_GND[Sensor GND]
+        LA_SENS_VCC+[Sensor VCC+]
     end
 
     subgraph PSU [12V Power Supply]
         P12[+12V]
-        PGND[GND]
+        PSU_GND[GND]
     end
 
     %% Arduino to Driver Logic
-    D5 --> IN1
-    D6 --> IN2
-    D9 --> PWM
-    V5 --> VCC
-    GND_A --> GND_D
+    D5 --> MD_A1
+    D6 --> MD_B1
+    D9 --> MD_P1
+    V5 --> MD_V1
+    GND_A --> MD_G1
 
     %% Power to Driver
-    P12 --> VIN
-    PGND --> GND_D
+    P12 --> PPLS
+    PGND --> PSU_GND
 
     %% Driver to Actuator Motor
     M1+ --> LA_M+
     M1- --> LA_M-
 
     %% Actuator Encoder to Arduino
-    LA_VCC --> V5
-    LA_GND --> GND_A
-    LA_A --> D2
-    LA_B --> D3
-
-    %% Global GND Bond
-    PGND --- GND_A
+    LA_SENS_VCC+ --> V5
+    LA_SENS_GND --> GND_A
+    LA_SENS_A_VOUT --> D2
+    LA_SENS_B_VOUT --> D3
 ```
